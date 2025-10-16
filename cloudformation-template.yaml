@@ -4,7 +4,7 @@ Description: 'Bintec Demo - AWS Infrastructure'
 Parameters:
   DomainName:
     Type: String
-    Default: 'gmail.com'
+    Default: 'pragma.com.co'
     Description: 'Domain name for SES email sending'
 
 Resources:
@@ -71,7 +71,7 @@ Resources:
       Role: !GetAtt LambdaExecutionRole.Arn
       Environment:
         Variables:
-          SES_FROM_EMAIL: 'juansebas1307@gmail.com'
+          SES_FROM_EMAIL: 'santiago.betancur@pragma.com.co'
       Code:
         ZipFile: |
           const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
